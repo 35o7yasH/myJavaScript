@@ -22,9 +22,6 @@ console.log(id === anotherID); //false
 //  const bigNumber = 1234567890123456789012345678901234567890n;
 // console.log(typeof bigNumber);
 
-
-
-
 // Reference(non-primitive)
 // Arrays, Objects, Functions
 
@@ -38,3 +35,36 @@ let myObject ={
 const myFunc = function(){
     console.log("Hello Buddy.");
 }
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+// Stack memory (primitive) & Heap memory (non-primitive/ reference)
+
+let myGitHubRepoName = "35oyash"
+
+let anotherName = myGitHubRepoName;
+
+
+anotherName = "Nitin"
+
+console.log(anotherName);
+
+//So, what happend here is that we changed the copied value, not the original value, for that anotherName is now nitin.
+
+
+
+let userOne = {
+    userEmail: "gmail@uk.com",
+    upiID: "upi@hdfcbank",
+}
+
+let userTwo = userOne;
+// console.log(userTwo);
+
+userTwo.userEmail = "google@uk.com"//to access something in an object, this is the method we use.
+
+console.log(userOne.userEmail);
+console.log(userTwo.userEmail);
