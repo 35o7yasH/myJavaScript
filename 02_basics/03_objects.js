@@ -24,7 +24,18 @@ const jsUser = {
 
 // to change the valuesm we use:
 jsUser.email = "nitin@chatgpt.com"
-console.log(jsUser["email"]);
-Object.freeze(jsUser)
-jsUser.name = "Donkeykong"
-console.log(jsUser["name"]);
+// console.log(jsUser["email"]);
+// Object.freeze(jsUser)
+// jsUser.name = "Donkeykong"
+// console.log(jsUser["name"]);
+
+
+jsUser.greeting = function() {
+    console.log("Hello JS User");    
+}
+
+jsUser.greetingtwo = function() {
+    console.log(`Hello JS User, ${this.location}`); //we use this instead of the object name.
+}
+console.log(jsUser.greeting());
+console.log(jsUser.greetingtwo());
