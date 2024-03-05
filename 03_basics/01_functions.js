@@ -51,7 +51,22 @@ function loginUserMessage(userName = "dsa"){
 
 
 
-function calculateCartPrice(...num1){
+function calculateCartPrice(va1, val2, ...num1){
     return num1
 }
-console.log(calculateCartPrice(200, 400, 500, 600, 4800));
+// console.log(calculateCartPrice(200, 400, 500, 4800) );
+
+const user = {
+    userName: "Nitin",
+    price: 349
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.userName}, and the price will be ${anyObject.price}.`);
+}
+// handleObject(user)
+handleObject({
+    userName: "Yash",
+    price: 399
+})
+
