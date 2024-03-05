@@ -25,4 +25,24 @@ function addTwoNums(number1, number2){
     return number1 + number2
 }
 const result = addTwoNums(8, 9)
-console.log(result);
+// console.log(result);
+
+
+// function loginUserMessage(userName){
+//     return `${userName} just logged in.`
+// }
+// console.log(loginUserMessage("Nitin"));
+
+// function loginUserMessage(userName){
+//     return `${userName} just logged in.`
+// }
+// console.log(loginUserMessage());
+
+
+function loginUserMessage(userName){
+    if{
+        
+    }
+    return `${userName} just logged in.`
+}
+console.log(loginUserMessage("Nitin"));
