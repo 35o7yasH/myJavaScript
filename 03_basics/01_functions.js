@@ -39,10 +39,19 @@ const result = addTwoNums(8, 9)
 // console.log(loginUserMessage());
 
 
-function loginUserMessage(userName){
-    if{
-        
+function loginUserMessage(userName = "dsa"){
+    if(!userName){
+        console.log("Please, enter an valid data.");
+        return
     }
     return `${userName} just logged in.`
 }
-console.log(loginUserMessage("Nitin"));
+// console.log(loginUserMessage());
+
+
+
+
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200, 400, 500, 600, 4800));
