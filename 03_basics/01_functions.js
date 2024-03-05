@@ -65,8 +65,14 @@ function handleObject(anyObject){
     console.log(`Username is ${anyObject.userName}, and the price will be ${anyObject.price}.`);
 }
 // handleObject(user)
-handleObject({
-    userName: "Yash",
-    price: 399
-})
+// handleObject({
+//     userName: "Yash",
+//     price: 399
+// })
 
+const myNewArray = [200, 400, 100, 600]
+function handleArray(anyArray){
+    return anyArray[1]
+}
+// console.log(handleArray(myNewArray));
+console.log(handleArray([200, 400, 800, 1000]));
