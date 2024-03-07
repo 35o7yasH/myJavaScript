@@ -8,6 +8,22 @@ if(true){
     console.log("INNER: ", a);
 }
 
-console.log(a);
+// console.log(a);
 // console.log(b);
 // console.log(c);
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//Nested Scope
+
+
+
+function one(){
+    const name = "nitin"
+
+    function two (){
+        const website = "youtube"
+    }
+}
