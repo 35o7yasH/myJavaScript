@@ -5,7 +5,7 @@ let a = 300
 if(true){
     let a = 20
     const b = 30
-    console.log("INNER: ", a);
+    //console.log("INNER: ", a);
 }
 
 // console.log(a);
@@ -21,9 +21,40 @@ if(true){
 
 
 function one(){
-    const name = "nitin"
+    const username = "nitin"
 
     function two (){
         const website = "youtube"
+        console.log(username);
     }
+    // console.log(website);
+    two()
+}
+//one()
+
+
+
+if (true) {
+    const username = "Yash"
+    if (username === "Yash") {
+        const website = " youtube"
+        //console.log(username + website);
+    }
+    //console.log(website);
+}
+//console.log(username);
+
+
+// +++++++++++++++++++++++++++ interesting +++++++++++++++++++++++++++++++++++
+
+
+console.log(addone(5));
+function addone (num) {
+    return num + 1
+}
+
+
+// addtwo(5)
+const addtwo = function(num){
+    return num + 1
 }
