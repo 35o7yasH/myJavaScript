@@ -12,7 +12,8 @@ let valueInNumbmer = Number(score);
 if we try to convert,
 "33" => 33,
 "33abc" => NaN,
-true => 1; false => 2,
+true => 1; false => 0;
+"" => false, "value" => true;
 null => 0,
 undefined => NaN,
 */
