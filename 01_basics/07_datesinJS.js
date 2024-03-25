@@ -4,6 +4,7 @@
 let myDate = new Date();
 // console.log(myDate);
 // console.log(myDate.toString());
+//console.log(myDate.toJSON()); // 2024-03-25T05:36:21:954Z
 // console.log(myDate.toLocaleString());
 // console.log(myDate.toDateString());
 // console.log(typeof myDate);
