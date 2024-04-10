@@ -1,5 +1,5 @@
-const accountId = 144553
-let accountEmail = "yashukik@gmail.com"
+const accountId = 144553 // when const is used the variable value can't be changed.
+let accountEmail = "yashukik@gmail.com" // we generally prefer to use let.
 var accountPassword = "12345"
 accountCity = "Pune"
 let accountState; //creating an variable and not assigning it with any value makes the state of the variable "undefined".
