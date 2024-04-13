@@ -84,3 +84,13 @@ num1 = num2 = num3 = 2+2;
 let gameCounter = 100;
 gameCounter++;
 console.log(gameCounter);
+
+let x = 5;
+let y = ++x; // Prefix increment: Increment x first, then assign to y
+console.log(x); // Output: 6
+console.log(y); // Output: 6
+
+let a = 5;
+let b = a++; // Postfix increment: Assign a to b first, then increment a
+console.log(a); // Output: 6
+console.log(b); // Output: 5
