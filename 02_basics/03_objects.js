@@ -1,5 +1,5 @@
-// singleton: something i don't understand;
-//Object.create
+// singleton
+//Object.create is a constructor and that is how singletons are made
 
 //object literals
 
