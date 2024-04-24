@@ -38,12 +38,14 @@ map.set("Ne", "Nepal")
 // }
 
 
-// const myObj = {
-//     'game1': 'NFS',
-//     'game2': "Valo",
-//     'game3': 'pubgm'
-// }
+const myObj = {
+    game1: 'NFS',
+    game2: "Valo",
+    game3: 'pubgm'
+}
                                             // It doesn't work on objects
 // for (const [key, value] of myObj) {
 //     console.log(key, value);
 // }
+
+
