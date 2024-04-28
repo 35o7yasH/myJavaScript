@@ -6,15 +6,15 @@ const myObject = {
     py: "python"
 }
 
-// for (const key in myObject) {
-//     console.log(`${key}, is the shortcut of ${myObject[key]}`);
-// }
+for (const key in myObject) {
+    console.log(`${key}, is the shortcut of ${myObject[key]}`);
+}
 
 
 
 const programming = ['js', 'python', 'java', 'cpp',]
 for (const key in programming) {
-    //console.log(key);
+    // console.log(key);
 }
 
 
@@ -30,5 +30,5 @@ map.set("Ne", "Nepal")
 
 
 for (const key in map) {
-    console.log(key);
+    // console.log(key);
 }
