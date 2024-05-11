@@ -11,8 +11,22 @@
     </ul>
 </body>
 <script>
-    function addLanguage(langName) {
-        document.createElement('li')
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
     }
+    addLanguage('python')
+    addLanguage('TypeScript')
+
+
+    function addLangName(langName){
+        const li = document.createElement('li')
+        li.append(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLangName('Go')
+    addLangName('Rust')
 </script>
 </html>
