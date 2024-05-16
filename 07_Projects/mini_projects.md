@@ -265,7 +265,9 @@ form.addEventListener('submit', function(e){
   </body>
 </html>
 ```
+
 ### JavaScript
+
 ```javascript
 const clock = document.getElementById('clock')
 
@@ -273,4 +275,12 @@ setInterval(function(){
     let date = new Date();
     clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
+```
+
+## Project_04 (Guess the Number game)
+
+### HTML
+
+```html
+
 ```
