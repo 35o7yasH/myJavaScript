@@ -35,12 +35,32 @@
 
     // event propogation
 
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, true)
+    //document.getElementById('images').addEventListener('click', function(e){          // the differnece between capturing mode(false) and bubbling mode(true) is that when
+    //     console.log("clicked inside the ul");                                         // we use the bubbling mode it goes from bottom to top whereas when we use the capturing 
+    // }, true)                                                                        // mode then it goes from top to bottom.
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked");
-    }, true)
+    // document.getElementById('owl').addEventListener('click', function(e){ 
+    //     console.log("owl clicked");
+    //     e.stopPropagation()   // this method used to stop the bubble mode to go to the top.
+    // }, true)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked")
+    // }, false)
+
+    document.querySelector('#image').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+        // removeIt.parentNode.remoceChild(removeIt);
+    }, false)
+
+
+
 </script>
 </html>
