@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baaler API sala</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: aliceblue;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+        }
+        .card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide by default */
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .card .details {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .card .details .followers {
+            font-size: 1.2em;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            background-color: #555;
+            color: aliceblue;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="open">Open</button>
+        <button id="close">Close</button>
+    </div>
+    <div class="card">
+        <img id="avatar" src="" alt="Avatar">
+        <div class="details">
+            <div class="username" id="username"></div>
+            <div class="followers">Followers: <span id="followers"></span></div>
+        </div>
+    </div>
+
+    <script>
+        const requestURL = "https://api.github.com/users/hiteshchoudhary";
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestURL);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data = JSON.parse(this.responseText);
+                document.getElementById('avatar').src = data.avatar_url;
+                document.getElementById('username').textContent = data.login;
+                document.getElementById('followers').textContent = data.followers;
+            }
+        }
+        xhr.send();
+
+        const card = document.querySelector('.card');
+        document.getElementById('open').addEventListener('click', function() {
+            card.style.display = 'flex';
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+            card.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
