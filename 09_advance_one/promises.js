@@ -1,52 +1,46 @@
+// fetch('https://something.com').then().catch().finally()
+
+
 const promiseOne = new Promise(function(resolve, reject){
     setTimeout(function(){
-        console.log("wanna be async task is done.");
+        console.log("Async task one done");
         resolve()
     }, 1000)
 })
 
 promiseOne.then(function(){
-    console.log("Promise consumed.");
+    console.log("Promise completed");
 })
-
-
 
 
 new Promise(function(resolve, reject){
     setTimeout(function(){
-        console.log("Async part 2 done.");
+        console.log("Async 2 completed");
         resolve()
     }, 1000)
 }).then(function(){
-    console.log("Async 2 printed.");
+    console.log("Promise part 2 done");
 })
+
 
 
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
-        resolve({username: "Yash", email: "yash@example.com"})
+        console.log("Async task 3 completed");
+        resolve({userName: "Yash", email: "Yash@google.com", password: 123})
     }, 1000)
 })
 
 promiseThree.then(function(user){
-    console.log(user.username);
+    console.log(user.userName);
 })
 
 
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = true;
-        if (!error){
-            resolve({username: "yash", emailID: "yash.k@google.come"})
-        } else{
-            reject('ERROR: Something went wrong.')
+        if(!error){
+
         }
     }, 1000)
 })
-
-const chipi = promiseFour.then((user) =>{
-    console.log(user);
-    return user.username
-})
-
-console.log(chipi);
