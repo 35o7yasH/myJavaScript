@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="Orange">Orange</button>
+    <button id="Green">Green</button>
+</body>
+<script>
+    //   function init(){
+    //     let name = "mozilla"
+    //     function displayname(){
+    //         console.log(name);
+    //     }
+    //     displayname();
+    //   }
+    //   init();
+
+    // function outer(){
+    //     let username = "yash";
+    //     console.log("outer", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner();
+    //     innerTwo();
+    // }
+    // outer()
+
+    // function makeFunction(){
+    //     let name = "mozilla";
+    //     function displayname(){
+    //         console.log(name);
+    //     }
+    //     return displayname;
+    // }
+    // const myfunc = makeFunction();
+    // myfunc()
+      
+    </script>
+    <script>
+        // document.getElementById('Orange').onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById('Green').onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+
+        document.getElementById('Orange').onclick = clickHandler("orange")
+        document.getElementById('Green').onclick = clickHandler("green")
+
+    </script>
+</html>
